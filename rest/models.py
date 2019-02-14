@@ -178,7 +178,7 @@ class GalleryImage(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'gallery_image'
+        db_table = 'gallery_images'
 
 
 class GalleryVideo(models.Model):
