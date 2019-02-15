@@ -28,4 +28,4 @@ class ClipAudioSerializer(serializers.ModelSerializer):
 class ClipVideoSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryClipVideo
-      fields = ('name', 'secondStart', 'secondEnd', 'audioName')
+      fields = ('name', 'secondStart', 'secondEnd', 'videoName')
