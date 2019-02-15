@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest'
+    'rest',
+    #'sslserver',
 ]
 
 REST_FRAMEWORK = {
@@ -85,7 +86,7 @@ DATABASES = {
     'USER': 'ghgnvszefvrksn',
     'PASSWORD' : 'f780af2628fc1bbcc688a4a156f54131cdc9e36c3ccba261117857264c6baf91' ,
     'HOST' : 'ec2-23-23-184-76.compute-1.amazonaws.com',
-    'PORT' : '5432' ,
+    'PORT' : '5432',
     }
 }
 
