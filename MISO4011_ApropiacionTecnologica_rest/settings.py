@@ -11,10 +11,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import django_heroku
-import logging
-
-
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -42,11 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest'
+    'rest',
+    #'sslserver',
 ]
 
 REST_FRAMEWORK = {
 }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'MISO4011_ApropiacionTecnologica_rest.urls'
 
@@ -89,7 +88,7 @@ DATABASES = {
     'USER': 'ghgnvszefvrksn',
     'PASSWORD' : 'f780af2628fc1bbcc688a4a156f54131cdc9e36c3ccba261117857264c6baf91' ,
     'HOST' : 'ec2-23-23-184-76.compute-1.amazonaws.com',
-    'PORT' : '5432' ,
+    'PORT' : '5432',
     }
 }
 
@@ -131,4 +130,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-django_heroku.settings(locals())

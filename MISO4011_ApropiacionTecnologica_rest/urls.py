@@ -1,17 +1,23 @@
-
-from django.conf.urls import url, include
-from django.contrib import admin
-from rest_framework import routers
-from rest import views
-
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
+from rest_framework.urlpatterns import format_suffix_patterns
 
-router = routers.DefaultRouter()
-router.register(r'images', views.ImageViewSet)
+from rest import views
 
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    path('admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
+    path('images/', views.image_list),
+    path('videos/', views.video_list),
+    path('audios/', views.audio_list),
+    path('clipVideo/', views.clipvideo_list),
+    path('clipAudio/', views.clipaudio_list),
+    path('images/<int:pk>', views.image_detail),
+    path('videos/<int:pk>', views.video_detail),
+    path('audios/<int:pk>', views.audio_detail),
+    path('clipAudio/<int:pk>', views.clipaudio_detail),
+    path('clipVideo/<int:pk>', views.clipvideo_detail),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
