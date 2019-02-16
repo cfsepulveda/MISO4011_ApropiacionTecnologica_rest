@@ -25,7 +25,8 @@ SECRET_KEY = '^bsl))04ttp@(%g30h45=t7=sl9zf@1&g(sd9omh6lgd+0kj%#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
