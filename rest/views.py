@@ -224,5 +224,6 @@ def create_user(request):
 def auth_user_view(request, format=None):
     content = {
         'username': unicode(request.username),
+        'email': unicode(request.email),
     }
     return Response(content)
