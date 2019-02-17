@@ -151,7 +151,8 @@ class GalleryImage(models.Model):
     country = models.CharField(max_length=140)
     description = models.CharField(max_length=1000, blank=True, null=True)
     type = models.CharField(max_length=5)
-    imageFile = models.CharField(db_column='imageFile', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    imageFile = models.CharField(db_column='imageFile', max_length=100, blank=True,
+                                 null=True)  # Field name made lowercase.
     user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
@@ -182,6 +183,7 @@ class GalleryClipAudio(models.Model):
     class Meta:
         managed = False
         db_table = 'gallery_clipaudio'
+
 
 class GalleryClipVideo(models.Model):
     name = models.CharField(max_length=200)
