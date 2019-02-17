@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest',
-    #'sslserver',
+    'sslserver',
 ]
 
 REST_FRAMEWORK = {
@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'MISO4011_ApropiacionTecnologica_rest.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'de5evucvjnov3b',
-    'USER': 'ghgnvszefvrksn',
-    'PASSWORD' : 'f780af2628fc1bbcc688a4a156f54131cdc9e36c3ccba261117857264c6baf91' ,
-    'HOST' : 'ec2-23-23-184-76.compute-1.amazonaws.com',
+    'NAME': 'd7bdrurpeofo4h',
+    'USER': 'zfslqpieegtwmm',
+    'PASSWORD' : '200c3b23cab015cf8c3ed92b3dafe5387a15594e9791aa0a75c032aac9d376ea' ,
+    'HOST' : 'ec2-50-17-193-83.compute-1.amazonaws.com',
     'PORT' : '5432',
     }
 }
