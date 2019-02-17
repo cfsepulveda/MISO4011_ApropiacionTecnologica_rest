@@ -202,15 +202,20 @@ def clipvideo_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 @permission_classes((AllowAny,))
 def create_user(request):
-    serialized = UserSerializer(data=request.data)
-    if serialized.is_valid():
-        serialized.save()
-        return Response(serialized.data, status=status.HTTP_201_CREATED)
-    else:
-        return Response(serialized._errors, status=status.HTTP_400_BAD_REQUEST)
+    if request.method == 'GET':
+        user = AuthUser.objects.all()
+        serializer = UserSerializer(user, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = UserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET'])
