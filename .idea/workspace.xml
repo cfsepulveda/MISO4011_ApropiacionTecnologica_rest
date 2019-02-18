@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="-1895">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="428">
+              <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
               <folding>
                 <element signature="e#0#96#0" expanded="true" />
               </folding>
@@ -48,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rest/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="204" column="26" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="26" />
+            <state relative-caret-position="378">
+              <caret line="230" column="34" selection-start-line="230" selection-start-column="34" selection-end-line="230" selection-end-column="34" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="254">
+              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -74,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="315">
+              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="43" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -96,6 +96,7 @@
     <findStrings>
       <find>rest_fr</find>
       <find>site_i</find>
+      <find>logi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,11 +108,11 @@
         <option value="$PROJECT_DIR$/rest/AARConnector" />
         <option value="$PROJECT_DIR$/rest/resources/Images.py" />
         <option value="$PROJECT_DIR$/rest/urls.py" />
-        <option value="$PROJECT_DIR$/rest/serializers.py" />
         <option value="$PROJECT_DIR$/rest/models.py" />
-        <option value="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py" />
-        <option value="$PROJECT_DIR$/rest/views.py" />
         <option value="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/settings.py" />
+        <option value="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py" />
+        <option value="$PROJECT_DIR$/rest/serializers.py" />
+        <option value="$PROJECT_DIR$/rest/views.py" />
       </list>
     </option>
   </component>
@@ -227,47 +228,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#96#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1895">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="254">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rest/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        <state relative-caret-position="315">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="43" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rest/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rest/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="204" column="26" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="26" />
+        <state relative-caret-position="378">
+          <caret line="230" column="34" selection-start-line="230" selection-start-column="34" selection-end-line="230" selection-end-column="34" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>

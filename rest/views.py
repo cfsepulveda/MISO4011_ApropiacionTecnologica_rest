@@ -217,13 +217,3 @@ def create_user(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
-@api_view(['GET'])
-@authentication_classes((SessionAuthentication, BasicAuthentication))
-@permission_classes((IsAuthenticated,))
-def auth_user_view(request, format=None):
-    content = {
-        'username': unicode(request.username),
-        'email': unicode(request.email),
-    }
-    return Response(content)
