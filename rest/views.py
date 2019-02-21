@@ -7,9 +7,9 @@ from rest_framework.generics import ListCreateAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, AuthUser
+from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, GalleryUserLogin
 from rest.serializers import ImageSerializer, VideoSerializer, AudioSerializer, ClipAudioSerializer, \
-    ClipVideoSerializer, UserSerializer
+    ClipVideoSerializer, UserLoginSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -203,17 +203,38 @@ def clipvideo_detail(request, pk):
 
 
 @api_view(['GET', 'POST'])
-@permission_classes((AllowAny,))
-def create_user(request):
+def user_list(request):
     if request.method == 'GET':
-        user = AuthUser.objects.all()
-        serializer = UserSerializer(user, many=True)
+        user = GalleryUserLogin.objects.all()
+        serializer = UserLoginSerializer(user, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = UserSerializer(data=request.data)
+        serializer = UserLoginSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def user_detail(request, pk):
+    try:
+        user = GalleryUserLogin.objects.get(pk=pk)
+    except GalleryUserLogin.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        serializer = UserLoginSerializer(user)
+        return Response(serializer.data)
+
+    elif request.method == 'PUT':
+        serializer = UserLoginSerializer(user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'DELETE':
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

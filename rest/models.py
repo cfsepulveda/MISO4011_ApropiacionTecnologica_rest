@@ -37,21 +37,19 @@ class AuthPermission(models.Model):
         unique_together = (('content_type', 'codename'),)
 
 
-class AuthUser(models.Model):
-    password = models.CharField(max_length=128)
-    last_login = models.DateTimeField(blank=True, null=True)
-    is_superuser = models.BooleanField()
-    username = models.CharField(unique=True, max_length=150)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=150)
-    email = models.CharField(max_length=254)
-    is_staff = models.BooleanField()
-    is_active = models.BooleanField()
-    date_joined = models.DateTimeField()
+class GalleryUserLogin(models.Model):
+    login = models.CharField(max_length=200)
+    password = models.CharField(max_length=200)
+    name = models.CharField(max_length=300)
+    lastname = models.CharField(max_length=300)
+    email = models.CharField(max_length=300)
+    photo = models.ImageField(upload_to='staticfiles/photo', null=True)
+    city = models.CharField(max_length=200, null=True)
+    country = models.CharField(max_length=200, null=True)
 
     class Meta:
         managed = False
-        db_table = 'auth_user'
+        db_table = 'gallery_userlogin'
 
 
 class AuthUserGroups(models.Model):

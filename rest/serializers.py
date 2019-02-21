@@ -1,4 +1,4 @@
-from .models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, AuthUser
+from .models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, GalleryUserLogin
 from rest_framework import serializers
 
 
@@ -31,20 +31,12 @@ class ClipVideoSerializer(serializers.ModelSerializer):
       fields = ('name', 'secondStart', 'secondEnd', 'videoName')
 
 
-class UserSerializer(serializers.ModelSerializer):
+class UserLoginSerializer(serializers.ModelSerializer):
 
     password = serializers.CharField(
           write_only=True,
     )
 
     class Meta:
-       model = AuthUser
-       fields = ('password', 'username', 'first_name', 'last_name', 'email')
-
-    def create(self, validated_data):
-        user = super(UserSerializer, self).create(validated_data)
-        if 'password' in validated_data:
-              user.set_password(validated_data['password'])
-              user.save()
-        return user
-
+       model = GalleryUserLogin
+       fields = ('login', 'password', 'name', 'lastname', 'email', 'photo', 'city', 'country')

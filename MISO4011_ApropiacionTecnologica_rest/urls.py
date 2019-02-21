@@ -18,8 +18,7 @@ urlpatterns = [
     path('audios/<int:pk>', views.audio_detail),
     path('clipAudio/<int:pk>', views.clipaudio_detail),
     path('clipVideo/<int:pk>', views.clipvideo_detail),
-    path('registerUser/', views.create_user),
-    path('loginUser/', views.create_user),
+    path('registerUser/', views.user_list),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

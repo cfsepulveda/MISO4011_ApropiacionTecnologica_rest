@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e477b02a-096d-476e-8b0b-72df55dd8ad2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/rest/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="210">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#22#31#0" expanded="true" />
@@ -24,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rest/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1895">
-              <caret line="41" column="13" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="252">
+              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -36,20 +38,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            <state relative-caret-position="336">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="25" />
               <folding>
-                <element signature="e#0#96#0" expanded="true" />
+                <element signature="e#0#106#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="230" column="34" selection-start-line="230" selection-start-column="34" selection-end-line="230" selection-end-column="34" />
+            <state relative-caret-position="230">
+              <caret line="220" column="8" selection-start-line="220" selection-start-column="8" selection-end-line="220" selection-end-column="8" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -65,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+            <state relative-caret-position="471">
+              <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -74,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="345">
+              <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -108,18 +110,18 @@
         <option value="$PROJECT_DIR$/rest/AARConnector" />
         <option value="$PROJECT_DIR$/rest/resources/Images.py" />
         <option value="$PROJECT_DIR$/rest/urls.py" />
-        <option value="$PROJECT_DIR$/rest/models.py" />
         <option value="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/settings.py" />
-        <option value="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py" />
+        <option value="$PROJECT_DIR$/rest/models.py" />
         <option value="$PROJECT_DIR$/rest/serializers.py" />
         <option value="$PROJECT_DIR$/rest/views.py" />
+        <option value="$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="147" />
+    <option name="x" value="12" />
     <option name="y" value="23" />
-    <option name="width" value="1773" />
+    <option name="width" value="1908" />
     <option name="height" value="980" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -128,22 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="MISO4011_ApropiacionTecnologica_rest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="MISO4011_ApropiacionTecnologica_rest" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="MISO4011_ApropiacionTecnologica_rest" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -183,10 +170,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="23" width="1773" height="980" extended-state="0" />
+    <frame x="12" y="23" width="1908" height="980" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09803922" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -220,7 +207,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="210">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#22#31#0" expanded="true" />
@@ -228,50 +215,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1895">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MISO4011_ApropiacionTecnologica_rest/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="345">
+          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/serializers.py">
+    <entry file="file://$PROJECT_DIR$/rest/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="230">
+          <caret line="220" column="8" selection-start-line="220" selection-start-column="8" selection-end-line="220" selection-end-column="8" />
           <folding>
-            <element signature="e#0#96#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/views.py">
+    <entry file="file://$PROJECT_DIR$/rest/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="230" column="34" selection-start-line="230" selection-start-column="34" selection-end-line="230" selection-end-column="34" />
+        <state relative-caret-position="336">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="25" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#106#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
         </state>
       </provider>
     </entry>
