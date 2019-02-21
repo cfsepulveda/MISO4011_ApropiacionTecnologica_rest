@@ -151,7 +151,7 @@ class GalleryImage(models.Model):
     type = models.CharField(max_length=5)
     imageFile = models.CharField(db_column='imageFile', max_length=100, blank=True,
                                  null=True)  # Field name made lowercase.
-    user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
+    user = models.ForeignKey(GalleryUserLogin, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False
