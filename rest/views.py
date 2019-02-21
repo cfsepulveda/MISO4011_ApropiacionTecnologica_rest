@@ -1,11 +1,12 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, status
-from rest_framework.decorators import api_view, permission_classes,authentication_classes
+from rest_framework.decorators import api_view, parser_classes
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.parsers import FormParser, MultiPartParser 
 
 from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, GalleryUserLogin
 from rest.serializers import ImageSerializer, VideoSerializer, AudioSerializer, ClipAudioSerializer, \
@@ -217,24 +218,23 @@ def user_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def user_detail(request, pk):
-    try:
-        user = GalleryUserLogin.objects.get(pk=pk)
-    except GalleryUserLogin.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
+@api_view(['GET','POST'])
+@parser_classes((FormParser, MultiPartParser))
+def login_user(request):
     if request.method == 'GET':
-        serializer = UserLoginSerializer(user)
+        user = GalleryUserLogin.objects.all()
+        serializer = UserLoginSerializer(user, many=True)
         return Response(serializer.data)
 
-    elif request.method == 'PUT':
-        serializer = UserLoginSerializer(user, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'POST':
 
-    elif request.method == 'DELETE':
-        user.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        usr = request.data.get('login')
+        pwd = request.data.get('password')
+        try:
+            user = GalleryUserLogin.objects.get(login=usr)
+            if user.password == pwd:
+                return Response(UserLoginSerializer(user).data)
+            else:
+                return Response(status=status.HTTP_400_BAD_REQUEST)
+        except GalleryUserLogin.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
