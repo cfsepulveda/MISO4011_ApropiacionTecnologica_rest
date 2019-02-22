@@ -126,6 +126,7 @@ class GalleryAudio(models.Model):
     date = models.DateTimeField()
     city = models.CharField(max_length=140)
     country = models.CharField(max_length=140)
+    category = models.ForeignKey(GalleryCategoria, null=True, on_delete=models.DO_NOTHING)
 
     class Meta:
         managed = False
@@ -133,8 +134,9 @@ class GalleryAudio(models.Model):
 
 
 class GalleryCategoria(models.Model):
-    name = models.CharField(max_length=200)
-    url = models.CharField(max_length=1000)
+    id = models.CharField(max_length=10, primary_key=id)
+    description = models.CharField(max_length=1000, null=False)
+    type = models.CharField(max_length=2, null=True)
 
     class Meta:
         managed = False
@@ -168,6 +170,7 @@ class GalleryImage(models.Model):
     imageFile = models.CharField(db_column='imageFile', max_length=100, blank=True,
                                  null=True)  # Field name made lowercase.
     user = models.ForeignKey(GalleryUserLogin, models.DO_NOTHING, blank=True, null=True)
+    category = models.ForeignKey(GalleryCategoria, null=True, on_delete=models.DO_NOTHING)
 
     class Meta:
         managed = False
@@ -182,6 +185,7 @@ class GalleryVideo(models.Model):
     date = models.DateTimeField()
     city = models.CharField(max_length=140)
     country = models.CharField(max_length=140)
+    category = models.ForeignKey(GalleryCategoria, null=True, on_delete=models.DO_NOTHING)
 
     class Meta:
         managed = False

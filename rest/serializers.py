@@ -1,4 +1,4 @@
-from .models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, GalleryUserLogin
+from .models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, GalleryUserLogin, GalleryCategoria
 from rest_framework import serializers
 
 
@@ -40,3 +40,9 @@ class UserLoginSerializer(serializers.ModelSerializer):
     class Meta:
        model = GalleryUserLogin
        fields = ('login', 'password', 'name', 'lastname', 'email', 'photo', 'city', 'country')
+
+
+class CategoriaSerializer(serializers.ModelSerializer):
+    class Meta:
+      model = GalleryCategoria
+      fields = ('id', 'description', 'type')
