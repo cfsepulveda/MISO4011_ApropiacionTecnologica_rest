@@ -146,7 +146,7 @@ class GalleryClipAudio(models.Model):
     secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
     secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
     audioname = models.CharField(db_column='audioName', max_length=200)  # Field name made lowercase.
-    email = models.CharField(db_column='videoName', max_length=200)  # Field name made lowercase.
+    email = models.CharField(db_column='email', max_length=200)  # Field name made lowercase.
 
     class Meta:
         managed = False
@@ -158,7 +158,7 @@ class GalleryClipVideo(models.Model):
     secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
     secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
     videoname = models.CharField(db_column='videoName', max_length=200)  # Field name made lowercase.
-    email = models.CharField(db_column='videoName', max_length=200)  # Field name made lowercase.
+    email = models.CharField(db_column='email', max_length=200)  # Field name made lowercase.
 
     class Meta:
         managed = False
