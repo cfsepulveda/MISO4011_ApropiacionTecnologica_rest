@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.parsers import FormParser, MultiPartParser 
 
-from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipAudio, GalleryClipVideo, GalleryUserLogin, GalleryCategoria
+from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipaudio, GalleryClipvideo, GalleryUserlogin, GalleryCategoria
 from rest.serializers import ImageSerializer, VideoSerializer, AudioSerializer, ClipAudioSerializer, \
     ClipVideoSerializer, UserLoginSerializer, CategoriaSerializer
 
@@ -130,7 +130,7 @@ def audio_detail(request, pk):
 @api_view(['GET', 'POST'])
 def clipaudio_list(request):
     if request.method == 'GET':
-        clipaudio = GalleryClipAudio.objects.all()
+        clipaudio = GalleryClipaudio.objects.all()
         serializer = ClipAudioSerializer(clipaudio, many=True)
         return Response(serializer.data)
 
@@ -145,8 +145,8 @@ def clipaudio_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 def clipaudio_detail(request, pk):
     try:
-        clipaudio = GalleryClipAudio.objects.get(pk=pk)
-    except GalleryClipAudio.DoesNotExist:
+        clipaudio = GalleryClipaudio.objects.get(pk=pk)
+    except GalleryClipaudio.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
@@ -168,7 +168,7 @@ def clipaudio_detail(request, pk):
 @api_view(['GET', 'POST'])
 def clipvideo_list(request):
     if request.method == 'GET':
-        clipvideo = GalleryClipVideo.objects.all()
+        clipvideo = GalleryClipvideo.objects.all()
         serializer = ClipVideoSerializer(clipvideo, many=True)
         return Response(serializer.data)
 
@@ -183,8 +183,8 @@ def clipvideo_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 def clipvideo_detail(request, pk):
     try:
-        clipvideo = GalleryClipVideo.objects.get(pk=pk)
-    except GalleryClipVideo.DoesNotExist:
+        clipvideo = GalleryClipvideo.objects.get(pk=pk)
+    except GalleryClipvideo.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
@@ -206,7 +206,7 @@ def clipvideo_detail(request, pk):
 @api_view(['GET', 'POST'])
 def user_list(request):
     if request.method == 'GET':
-        user = GalleryUserLogin.objects.all()
+        user = GalleryUserlogin.objects.all()
         serializer = UserLoginSerializer(user, many=True)
         return Response(serializer.data)
 
@@ -221,7 +221,7 @@ def user_list(request):
 @api_view(['GET','POST'])
 def login_user(request):
     if request.method == 'GET':
-        user = GalleryUserLogin.objects.all()
+        user = GalleryUserlogin.objects.all()
         serializer = UserLoginSerializer(user, many=True)
         return Response(serializer.data)
 
@@ -232,12 +232,12 @@ def login_user(request):
         print(usr)
         print(request)
         try:
-            user = GalleryUserLogin.objects.get(login=usr)
+            user = GalleryUserlogin.objects.get(login=usr)
             if user.password == pwd:
                 return Response(UserLoginSerializer(user).data)
             else:
                 return Response(status=status.HTTP_400_BAD_REQUEST)
-        except GalleryUserLogin.DoesNotExist:
+        except GalleryUserlogin.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
         
 @api_view(['GET', 'POST'])
