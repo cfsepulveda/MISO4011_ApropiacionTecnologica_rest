@@ -141,24 +141,24 @@ class GalleryCategoria(models.Model):
         db_table = 'gallery_categoria'
 
 
-class GalleryClipAudio(models.Model):
+class GalleryClipaudio(models.Model):
     name = models.CharField(max_length=200)
     secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
     secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
     audioname = models.CharField(db_column='audioName', max_length=200)  # Field name made lowercase.
-    email = models.CharField(max_length=200, blank=True, null=True)
+    email = models.CharField(db_column='email', max_length=200, blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'gallery_clipaudio'
 
 
-class GalleryClipVideo(models.Model):
+class GalleryClipvideo(models.Model):
     name = models.CharField(max_length=200)
     secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
     secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
     videoname = models.CharField(db_column='videoName', max_length=200)  # Field name made lowercase.
-    email = models.CharField(max_length=200, blank=True, null=True)
+    email = models.CharField(db_column='email', max_length=200, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -183,7 +183,7 @@ class GalleryImage(models.Model):
         db_table = 'gallery_image'
 
 
-class GalleryUserLogin(models.Model):
+class GalleryUserlogin(models.Model):
     login = models.CharField(max_length=200)
     password = models.CharField(max_length=200)
     name = models.CharField(max_length=300)
