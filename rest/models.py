@@ -126,7 +126,6 @@ class GalleryAudio(models.Model):
     date = models.DateTimeField()
     city = models.CharField(max_length=140)
     country = models.CharField(max_length=140)
-    category = models.ForeignKey(GalleryCategoria, null=True, on_delete=models.DO_NOTHING)
 
     class Meta:
         managed = False
@@ -134,28 +133,35 @@ class GalleryAudio(models.Model):
 
 
 class GalleryCategoria(models.Model):
-    id = models.CharField(max_length=10, primary_key=id)
-    description = models.CharField(max_length=1000, null=False)
-    type = models.CharField(max_length=2, null=True)
+    id = models.CharField(primary_key=True, max_length=10)
+    descripcion = models.CharField(max_length=1000)
 
     class Meta:
         managed = False
         db_table = 'gallery_categoria'
 
 
-class GalleryUserLogin(models.Model):
-    login = models.CharField(max_length=200)
-    password = models.CharField(max_length=200)
-    name = models.CharField(max_length=300)
-    lastname = models.CharField(max_length=300)
-    email = models.CharField(max_length=300)
-    photo = models.ImageField(upload_to='staticfiles/photo', null=True)
-    city = models.CharField(max_length=200, null=True)
-    country = models.CharField(max_length=200, null=True)
+class GalleryClipaudio(models.Model):
+    name = models.CharField(max_length=200)
+    secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
+    secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
+    audioname = models.CharField(db_column='audioName', max_length=200)  # Field name made lowercase.
 
     class Meta:
         managed = False
-        db_table = 'gallery_userlogin'
+        db_table = 'gallery_clipaudio'
+
+
+class GalleryClipvideo(models.Model):
+    name = models.CharField(max_length=200)
+    secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
+    secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
+    videoname = models.CharField(db_column='videoName', max_length=200)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'gallery_clipvideo'
+
 
 class GalleryImage(models.Model):
     name = models.CharField(max_length=200)
@@ -167,14 +173,27 @@ class GalleryImage(models.Model):
     country = models.CharField(max_length=140)
     description = models.CharField(max_length=1000, blank=True, null=True)
     type = models.CharField(max_length=5)
-    imageFile = models.CharField(db_column='imageFile', max_length=100, blank=True,
-                                 null=True)  # Field name made lowercase.
-    user = models.ForeignKey(GalleryUserLogin, models.DO_NOTHING, blank=True, null=True)
-    category = models.ForeignKey(GalleryCategoria, null=True, on_delete=models.DO_NOTHING)
+    imagefile = models.CharField(db_column='imageFile', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'gallery_image'
+
+
+class GalleryUserlogin(models.Model):
+    login = models.CharField(max_length=200)
+    password = models.CharField(max_length=200)
+    name = models.CharField(max_length=300)
+    lastname = models.CharField(max_length=300)
+    email = models.CharField(max_length=300)
+    photo = models.CharField(max_length=100, blank=True, null=True)
+    city = models.CharField(max_length=200, blank=True, null=True)
+    country = models.CharField(max_length=200, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'gallery_userlogin'
 
 
 class GalleryVideo(models.Model):
@@ -185,30 +204,7 @@ class GalleryVideo(models.Model):
     date = models.DateTimeField()
     city = models.CharField(max_length=140)
     country = models.CharField(max_length=140)
-    category = models.ForeignKey(GalleryCategoria, null=True, on_delete=models.DO_NOTHING)
 
     class Meta:
         managed = False
         db_table = 'gallery_video'
-
-
-class GalleryClipAudio(models.Model):
-    name = models.CharField(max_length=200)
-    secondStart = models.CharField(max_length=200)
-    secondEnd = models.CharField(max_length=200)
-    audioName = models.CharField(max_length=200)
-
-    class Meta:
-        managed = False
-        db_table = 'gallery_clipaudio'
-
-
-class GalleryClipVideo(models.Model):
-    name = models.CharField(max_length=200)
-    secondStart = models.CharField(max_length=200)
-    secondEnd = models.CharField(max_length=200)
-    videoName = models.CharField(max_length=200)
-
-    class Meta:
-        managed = False
-        db_table = 'gallery_clipvideo'
