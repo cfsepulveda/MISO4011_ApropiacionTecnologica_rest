@@ -22,13 +22,13 @@ class AudioSerializer(serializers.ModelSerializer):
 class ClipAudioSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryClipAudio
-      fields = ('name', 'secondStart', 'secondEnd', 'audioName')
+      fields = ('name', 'secondStart', 'secondEnd', 'audioName', 'email')
 
 
 class ClipVideoSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryClipVideo
-      fields = ('name', 'secondStart', 'secondEnd', 'videoName')
+      fields = ('name', 'secondStart', 'secondEnd', 'videoName' , 'email')
 
 
 class UserLoginSerializer(serializers.ModelSerializer):
