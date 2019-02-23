@@ -227,9 +227,11 @@ def login_user(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
-
         usr = request.data.get('login')
         pwd = request.data.get('password')
+        print(usr)
+        print(usr)
+        print(request)
         try:
             user = GalleryUserLogin.objects.get(login=usr)
             if user.password == pwd:
