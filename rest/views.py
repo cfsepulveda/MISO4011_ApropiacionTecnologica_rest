@@ -204,7 +204,6 @@ def clipvideo_detail(request, pk):
 
 
 @api_view(['GET', 'POST'])
-@parser_classes((FormParser, MultiPartParser))
 def user_list(request):
     if request.method == 'GET':
         user = GalleryUserLogin.objects.all()

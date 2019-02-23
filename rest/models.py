@@ -141,7 +141,7 @@ class GalleryCategoria(models.Model):
         db_table = 'gallery_categoria'
 
 
-class GalleryClipaudio(models.Model):
+class GalleryClipAudio(models.Model):
     name = models.CharField(max_length=200)
     secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
     secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
@@ -152,7 +152,7 @@ class GalleryClipaudio(models.Model):
         db_table = 'gallery_clipaudio'
 
 
-class GalleryClipvideo(models.Model):
+class GalleryClipVideo(models.Model):
     name = models.CharField(max_length=200)
     secondstart = models.CharField(db_column='secondStart', max_length=200)  # Field name made lowercase.
     secondend = models.CharField(db_column='secondEnd', max_length=200)  # Field name made lowercase.
@@ -181,7 +181,7 @@ class GalleryImage(models.Model):
         db_table = 'gallery_image'
 
 
-class GalleryUserlogin(models.Model):
+class GalleryUserLogin(models.Model):
     login = models.CharField(max_length=200)
     password = models.CharField(max_length=200)
     name = models.CharField(max_length=300)
