@@ -219,7 +219,6 @@ def user_list(request):
 
 
 @api_view(['GET','POST'])
-@parser_classes((FormParser, MultiPartParser))
 def login_user(request):
     if request.method == 'GET':
         user = GalleryUserLogin.objects.all()
