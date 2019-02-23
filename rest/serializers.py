@@ -5,7 +5,7 @@ from rest_framework import serializers
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryImage
-      fields = ('name', 'url', 'title', 'author', 'date', 'city', 'country', 'description', 'type', 'imageFile', 'user')
+      fields = ('name', 'url', 'title', 'author', 'date', 'city', 'country', 'description', 'type', 'user')
 
 
 class VideoSerializer(serializers.ModelSerializer):
