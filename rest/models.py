@@ -117,6 +117,21 @@ class DjangoSession(models.Model):
         managed = False
         db_table = 'django_session'
 
+class GalleryMediaType (models.Model):
+    id=models.AutoField(primary_key=True)
+    Name=models.CharField(max_length=10,null=False)
+    class Meta:
+        managed = False
+        db_table = 'gallery_mediatype'
+        
+class GalleryCategoria(models.Model):
+    id = models.CharField(primary_key=True, max_length=10)
+    description = models.CharField(max_length=1000)
+    type = models.ForeignKey(GalleryMediaType, models.DO_NOTHING, blank=True, null=True)    
+
+    class Meta:
+        managed = False
+        db_table = 'gallery_categoria'
 
 class GalleryAudio(models.Model):
     name = models.CharField(max_length=200)
@@ -126,19 +141,12 @@ class GalleryAudio(models.Model):
     date = models.DateTimeField()
     city = models.CharField(max_length=140)
     country = models.CharField(max_length=140)
-
+    Categoria = models.ForeignKey(GalleryCategoria, models.DO_NOTHING, blank=True, null=True)
     class Meta:
         managed = False
         db_table = 'gallery_audio'
 
 
-class GalleryCategoria(models.Model):
-    id = models.CharField(primary_key=True, max_length=10)
-    descripcion = models.CharField(max_length=1000)
-
-    class Meta:
-        managed = False
-        db_table = 'gallery_categoria'
 
 
 class GalleryClipaudio(models.Model):
@@ -160,6 +168,7 @@ class GalleryClipvideo(models.Model):
     videoname = models.CharField(db_column='videoName', max_length=200)  # Field name made lowercase.
     email = models.CharField(max_length=200, blank=True, null=True)
 
+
     class Meta:
         managed = False
         db_table = 'gallery_clipvideo'
@@ -177,7 +186,7 @@ class GalleryImage(models.Model):
     type = models.CharField(max_length=5)
     imagefile = models.CharField(db_column='imageFile', max_length=100, blank=True, null=True)  # Field name made lowercase.
     user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
-
+    Categoria = models.ForeignKey(GalleryCategoria, models.DO_NOTHING, blank=True, null=True)
     class Meta:
         managed = False
         db_table = 'gallery_image'
@@ -206,7 +215,7 @@ class GalleryVideo(models.Model):
     date = models.DateTimeField()
     city = models.CharField(max_length=140)
     country = models.CharField(max_length=140)
-
+    Categoria = models.ForeignKey(GalleryCategoria, models.DO_NOTHING, blank=True, null=True)
     class Meta:
         managed = False
         db_table = 'gallery_video'
