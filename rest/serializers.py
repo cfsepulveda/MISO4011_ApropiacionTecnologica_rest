@@ -1,23 +1,23 @@
-from .models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipaudio, GalleryClipvideo, GalleryUserlogin, GalleryCategoria
+from .models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipaudio, GalleryClipvideo, GalleryUserlogin, GalleryCategoria, GalleryMediaType
 from rest_framework import serializers
 
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryImage
-      fields = ('name', 'url', 'title', 'author', 'date', 'city', 'country', 'description', 'type', 'user')
+      fields = ('name', 'url', 'title', 'author', 'date', 'city', 'country', 'description', 'type', 'user','Categoria')
 
 
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryVideo
-      fields = ('name', 'url', 'name', 'url', 'title', 'author', 'date', 'city', 'country')
-
+      fields = ('name', 'url', 'name', 'url', 'title', 'author', 'date', 'city', 'country','Categoria')
+        
 
 class AudioSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryAudio
-      fields = ('name', 'url', 'name', 'url', 'title', 'author', 'date', 'city', 'country')
+      fields = ('name', 'url', 'name', 'url', 'title', 'author', 'date', 'city', 'country','Categoria')
 
 class ClipAudioSerializer(serializers.ModelSerializer):
     class Meta:
@@ -46,3 +46,8 @@ class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
       model = GalleryCategoria
       fields = ('id', 'description', 'type')
+
+class MediaTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+      model = GalleryMediaType
+      fields = ('id', 'Name')

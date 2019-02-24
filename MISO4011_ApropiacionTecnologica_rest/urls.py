@@ -21,6 +21,7 @@ urlpatterns = [
     path('registerUser/', views.user_list),
     path('loginUser/', views.login_user),
     path('categories/', views.categoria_list),
+    path('mediatypes/', views.mediatype_list),
     path('categories/<int:pk>', views.categoria_detail),
 ]
 

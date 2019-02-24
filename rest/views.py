@@ -8,9 +8,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.parsers import FormParser, MultiPartParser 
 
-from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipaudio, GalleryClipvideo, GalleryUserlogin, GalleryCategoria
+from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipaudio, GalleryClipvideo, GalleryUserlogin, GalleryCategoria,GalleryMediaType
 from rest.serializers import ImageSerializer, VideoSerializer, AudioSerializer, ClipAudioSerializer, \
-    ClipVideoSerializer, UserLoginSerializer, CategoriaSerializer
+    ClipVideoSerializer, UserLoginSerializer, CategoriaSerializer,MediaTypeSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -276,3 +276,17 @@ def categoria_detail(request, pk):
     elif request.method == 'DELETE':
         categoria.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET', 'POST'])
+def mediatype_list(request):
+    if request.method == 'GET':
+        mediatype = GalleryMediaType.objects.all()
+        serializer = MediaTypeSerializer(mediatype, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = MediaTypeSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
