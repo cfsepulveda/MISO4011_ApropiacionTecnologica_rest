@@ -12,6 +12,10 @@ from rest.models import GalleryImage, GalleryVideo, GalleryAudio, GalleryClipaud
 from rest.serializers import ImageSerializer, VideoSerializer, AudioSerializer, ClipAudioSerializer, \
     ClipVideoSerializer, UserLoginSerializer, CategoriaSerializer,MediaTypeSerializer
 
+import sendgrid
+import os
+from sendgrid.helpers.mail import *
+
 
 @api_view(['GET', 'POST'])
 def image_list(request):
@@ -173,6 +177,13 @@ def clipvideo_list(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
+        sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+        from_email = Email("galeria@grupo1.com")
+        subject = "Clip Cargado"
+        to_email = Email(request.data.get('email'))
+        content = Content("text/plain", "Tu clip" + request.data.get('name') + "ha sido cargado con exito" )
+        mail = Mail(from_email, subject, to_email, content)
+        response = sg.client.mail.send.post(request_body=mail.get())        
         serializer = ClipVideoSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
